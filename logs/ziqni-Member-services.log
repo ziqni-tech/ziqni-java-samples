@@ -1,0 +1,1025 @@
+[34m13-11-2024 10:10:54.760 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:10:54.780 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [oIIBJZMB6y5_nJn6Li68] 
+[34m13-11-2024 10:10:55.616 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:10:55.617 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:10:55.618 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:10:55.618 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:10:55.618 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:10:55.618 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 20] - Launched compute engine app for project [resource-not-set] and user [user-not-set] 
+[1;31m13-11-2024 10:10:56.980 [main] GlobalExceptionHandler ERROR[0;39m [36mc.z.u.GlobalExceptionHandler[0;39m [GlobalExceptionHandler.java: 11] - Unhandled exception caught! 
+com.auth0.jwt.exceptions.JWTDecodeException: The token was expected to have 3 parts, but got 1.
+	at com.auth0.jwt.TokenUtils.splitToken(TokenUtils.java:21)
+	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:31)
+	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:27)
+	at com.auth0.jwt.JWT.decode(JWT.java:45)
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:146)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:33)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[34m13-11-2024 10:15:55.054 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 17] - Running Admin Sample... 
+[34m13-11-2024 10:15:55.057 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:15:55.076 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [TnUFJZMBCKiL0o44ww7E] 
+[34m13-11-2024 10:15:55.899 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:15:55.899 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:15:55.899 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:15:55.900 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:15:55.901 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:15:55.901 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 26] - Launched compute engine app for project [resource-not-set] and user [user-not-set] 
+[1;31m13-11-2024 10:15:57.174 [main] GlobalExceptionHandler ERROR[0;39m [36mc.z.u.GlobalExceptionHandler[0;39m [GlobalExceptionHandler.java: 11] - Unhandled exception caught! 
+com.auth0.jwt.exceptions.JWTDecodeException: The token was expected to have 3 parts, but got 1.
+	at com.auth0.jwt.TokenUtils.splitToken(TokenUtils.java:21)
+	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:31)
+	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:27)
+	at com.auth0.jwt.JWT.decode(JWT.java:45)
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:146)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:37)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[34m13-11-2024 10:16:55.633 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 17] - Running Admin Sample... 
+[34m13-11-2024 10:16:55.637 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:16:55.656 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [DfEGJZMBaFR1_0UtsPho] 
+[34m13-11-2024 10:16:56.489 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:16:56.489 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:16:56.489 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:16:56.489 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:16:56.489 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:16:56.489 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:16:56.490 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:16:56.490 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:16:56.490 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:16:56.490 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:16:56.490 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:16:56.490 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:16:56.490 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:16:56.490 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:16:56.490 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:16:56.491 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 26] - Launched compute engine app for project [resource-not-set] and user [user-not-set] 
+[1;31m13-11-2024 10:17:08.160 [main] GlobalExceptionHandler ERROR[0;39m [36mc.z.u.GlobalExceptionHandler[0;39m [GlobalExceptionHandler.java: 11] - Unhandled exception caught! 
+com.auth0.jwt.exceptions.JWTDecodeException: The token was expected to have 3 parts, but got 1.
+	at com.auth0.jwt.TokenUtils.splitToken(TokenUtils.java:21)
+	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:31)
+	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:27)
+	at com.auth0.jwt.JWT.decode(JWT.java:45)
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:146)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:37)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[34m13-11-2024 10:18:24.138 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 17] - Running Admin Sample... 
+[34m13-11-2024 10:18:24.141 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:18:24.161 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [_2sIJZMBEbMv-qHVCs4h] 
+[34m13-11-2024 10:18:25.020 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:25.021 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:18:25.021 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:25.021 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:25.021 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:25.021 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:25.021 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:18:25.021 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:25.021 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:25.022 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:18:25.022 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:25.022 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:18:25.022 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:25.022 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:18:25.022 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:25.023 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 26] - Launched compute engine app for project [resource-not-set] and user [user-not-set] 
+[1;31m13-11-2024 10:18:28.517 [main] AdminApiClientConfiguration ERROR[0;39m [36mc.z.a.s.c.AdminApiClientConfiguration[0;39m [AdminApiClientConfiguration.java: 160] - API Key error 
+java.lang.Exception: Invalid api key - resource do not match first-space.ziqni.app
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:159)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:37)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[1;31m13-11-2024 10:18:28.517 [main] GlobalExceptionHandler ERROR[0;39m [36mc.z.u.GlobalExceptionHandler[0;39m [GlobalExceptionHandler.java: 11] - Unhandled exception caught! 
+java.lang.Exception: Invalid api key - resource do not match first-space.ziqni.app
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:159)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:37)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[34m13-11-2024 10:18:57.049 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 17] - Running Admin Sample... 
+[34m13-11-2024 10:18:57.052 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:18:57.073 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [MzkIJZMBN3YsnIv0iuCw] 
+[34m13-11-2024 10:18:57.885 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:57.885 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:18:57.885 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:57.885 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:57.885 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:57.885 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:57.886 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:18:57.886 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:57.886 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:57.886 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:18:57.886 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:57.886 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:18:57.886 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:57.886 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:18:57.886 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:18:57.887 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 26] - Launched compute engine app for project [resource-not-set] and user [user-not-set] 
+[1;31m13-11-2024 10:19:02.447 [main] AdminApiClientConfiguration ERROR[0;39m [36mc.z.a.s.c.AdminApiClientConfiguration[0;39m [AdminApiClientConfiguration.java: 160] - API Key error 
+java.lang.Exception: Invalid api key - resource do not match first-space.ziqni.app
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:159)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:37)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[1;31m13-11-2024 10:19:02.447 [main] GlobalExceptionHandler ERROR[0;39m [36mc.z.u.GlobalExceptionHandler[0;39m [GlobalExceptionHandler.java: 11] - Unhandled exception caught! 
+java.lang.Exception: Invalid api key - resource do not match first-space.ziqni.app
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:159)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:37)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[34m13-11-2024 10:20:08.217 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 17] - Running Admin Sample... 
+[34m13-11-2024 10:20:08.220 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:20:08.239 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [mU4JJZMBqL6iE-R7oPmv] 
+[34m13-11-2024 10:20:09.116 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:20:09.117 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:20:09.117 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:20:09.117 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:20:09.117 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:20:09.117 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:20:09.117 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:20:09.117 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:20:09.117 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:20:09.118 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:20:09.118 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:20:09.118 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:20:09.118 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:20:09.118 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:20:09.118 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:22:01.395 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 26] - Launched compute engine app for project [resource-not-set] and user [user-not-set] 
+[1;31m13-11-2024 10:22:02.704 [main] AdminApiClientConfiguration ERROR[0;39m [36mc.z.a.s.c.AdminApiClientConfiguration[0;39m [AdminApiClientConfiguration.java: 160] - API Key error 
+java.lang.Exception: Invalid api key - resource do not match first-space.ziqni.app
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:159)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:37)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[1;31m13-11-2024 10:22:02.704 [main] GlobalExceptionHandler ERROR[0;39m [36mc.z.u.GlobalExceptionHandler[0;39m [GlobalExceptionHandler.java: 11] - Unhandled exception caught! 
+java.lang.Exception: Invalid api key - resource do not match first-space.ziqni.app
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:159)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:37)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[34m13-11-2024 10:24:49.434 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 17] - Running Admin Sample... 
+[34m13-11-2024 10:24:49.437 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:24:49.438 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [ZNcNJZMBSLhFwLXC694e] 
+[34m13-11-2024 10:24:50.196 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:24:50.197 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:24:50.197 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:24:50.197 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:24:50.197 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:24:50.197 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:24:50.197 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:24:50.197 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:24:50.197 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:24:50.197 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:24:50.198 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:24:50.198 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:24:50.198 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:24:50.198 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:24:50.198 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:24:50.199 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 27] - Launched compute engine app for project [wewefwefd.ziqni.app] and user [user-not-set] 
+[1;31m13-11-2024 10:24:51.468 [main] AdminApiClientConfiguration ERROR[0;39m [36mc.z.a.s.c.AdminApiClientConfiguration[0;39m [AdminApiClientConfiguration.java: 160] - API Key error 
+java.lang.Exception: Invalid api key - resource do not match first-space.ziqni.app
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:159)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:38)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[1;31m13-11-2024 10:24:51.469 [main] GlobalExceptionHandler ERROR[0;39m [36mc.z.u.GlobalExceptionHandler[0;39m [GlobalExceptionHandler.java: 11] - Unhandled exception caught! 
+java.lang.Exception: Invalid api key - resource do not match first-space.ziqni.app
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:159)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:38)
+	at com.ziqni.Main.runAdminSample(Main.java:80)
+	at com.ziqni.Main.main(Main.java:28)
+[34m13-11-2024 10:25:19.176 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 17] - Running Admin Sample... 
+[34m13-11-2024 10:25:19.180 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:25:19.205 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [0MIOJZMBD7iVKt8KX1hl] 
+[34m13-11-2024 10:25:20.009 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:25:20.010 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:25:20.010 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:25:20.010 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:25:20.010 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:25:20.010 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:25:20.010 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:25:20.010 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:25:20.010 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:25:20.011 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:25:20.011 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:25:20.011 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:25:20.011 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:25:20.011 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:25:20.011 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:25:23.210 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 27] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 10:25:24.521 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @13717ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 10:25:24.577 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 10:25:24.989 [WebSocketClient@1241976048-87] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 10:25:24.991 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 10:25:24.992 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 10:25:24.993 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 10:25:24.995 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 10:25:24.995 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 10:25:24.995 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 10:25:25.076 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 41] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 10:25:25.076 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 43] - +++ Started the streaming client 
+[34m13-11-2024 10:35:48.466 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 19] - Running Admin Sample... 
+[34m13-11-2024 10:35:48.470 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:35:48.489 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [VpkXJZMBoVmzUUDv-SKJ] 
+[34m13-11-2024 10:35:49.400 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:35:49.400 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:35:49.400 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:35:49.400 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:35:49.401 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:35:49.401 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:35:49.401 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:35:49.401 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:35:49.401 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:35:49.401 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:35:49.401 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:35:49.401 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:35:49.401 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:35:49.402 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:35:49.402 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:35:49.402 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 29] - Launched compute engine app for project [.ziqni.app] and user [user-not-set] 
+[1;31m13-11-2024 10:35:50.687 [main] GlobalExceptionHandler ERROR[0;39m [36mc.z.u.GlobalExceptionHandler[0;39m [GlobalExceptionHandler.java: 11] - Unhandled exception caught! 
+com.auth0.jwt.exceptions.JWTDecodeException: The token was expected to have 3 parts, but got 1.
+	at com.auth0.jwt.TokenUtils.splitToken(TokenUtils.java:21)
+	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:31)
+	at com.auth0.jwt.JWTDecoder.<init>(JWTDecoder.java:27)
+	at com.auth0.jwt.JWT.decode(JWT.java:45)
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:146)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:40)
+	at com.ziqni.Main.runAdminSample(Main.java:85)
+	at com.ziqni.Main.main(Main.java:33)
+[34m13-11-2024 10:36:16.864 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 19] - Running Admin Sample... 
+[34m13-11-2024 10:36:16.867 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:36:16.887 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [6M8YJZMBoYFzTzx3aJ13] 
+[34m13-11-2024 10:36:17.667 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:17.668 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:36:17.668 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:17.668 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:17.668 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:17.668 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:17.668 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:36:17.668 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:17.668 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:17.668 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:36:17.668 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:17.669 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:36:17.669 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:17.669 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:36:17.669 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:17.670 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 29] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 10:36:18.978 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @8945ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 10:36:19.031 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 10:36:19.395 [WebSocketClient@1241976048-89] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 10:36:19.396 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 10:36:19.398 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 10:36:19.399 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 10:36:19.402 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 10:36:19.402 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 10:36:19.402 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 10:36:19.529 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 43] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 10:36:19.530 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 45] - +++ Started the streaming client 
+[34m13-11-2024 10:36:19.530 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 50] - +++ Admin API connected 
+[34m13-11-2024 10:36:47.237 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 19] - Running Admin Sample... 
+[34m13-11-2024 10:36:47.240 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:36:47.259 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [7LgYJZMBpPPs5DrD33ob] 
+[34m13-11-2024 10:36:48.050 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:48.050 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:36:48.050 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:48.050 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:48.050 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:48.050 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:48.050 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:36:48.050 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:48.051 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:48.051 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:36:48.051 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:48.051 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:36:48.051 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:48.051 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:36:48.051 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:36:48.052 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 29] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 10:36:49.344 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @10898ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 10:36:49.394 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 10:36:49.747 [WebSocketClient@1241976048-87] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 10:36:49.748 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 10:36:49.749 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 10:36:49.750 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 10:36:49.753 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 10:36:49.753 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 10:36:49.754 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 10:36:49.893 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 43] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 10:36:49.893 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 45] - +++ Started the streaming client 
+[34m13-11-2024 10:36:49.894 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 50] - +++ Admin API connected 
+[34m13-11-2024 10:38:13.650 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 19] - Running Admin Sample... 
+[34m13-11-2024 10:38:13.653 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:38:13.672 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [OtsaJZMB66Zs2lRoMIWo] 
+[34m13-11-2024 10:38:14.575 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:38:14.576 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:38:14.576 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:38:14.576 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:38:14.576 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:38:14.576 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:38:14.576 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:38:14.576 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:38:14.576 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:38:14.576 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:38:14.577 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:38:14.577 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:38:14.577 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:38:14.577 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:38:14.577 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:38:14.578 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 29] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 10:38:15.871 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @13346ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 10:38:15.923 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 10:38:16.255 [WebSocketClient@1241976048-89] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 10:38:16.256 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 10:38:16.257 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 10:38:16.258 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 10:38:16.260 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 10:38:16.260 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 10:38:16.261 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 10:38:16.422 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 43] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 10:38:16.422 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 45] - +++ Started the streaming client 
+[34m13-11-2024 10:38:16.422 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 50] - +++ Admin API connected 
+[34m13-11-2024 10:40:38.433 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 19] - Running Admin Sample... 
+[34m13-11-2024 10:40:38.436 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:40:38.455 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [mI0cJZMBp5NYr9_vZsk3] 
+[34m13-11-2024 10:40:39.304 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:40:39.305 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:40:39.305 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:40:39.305 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:40:39.305 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:40:39.305 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:40:39.305 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:40:39.305 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:40:39.305 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:40:39.306 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:40:39.306 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:40:39.306 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:40:39.306 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:40:39.306 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:40:39.306 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:40:39.307 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 29] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 10:40:40.614 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @12755ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 10:40:40.670 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 10:40:41.044 [WebSocketClient@1241976048-89] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 10:40:41.045 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 10:40:41.046 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 10:40:41.047 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 10:40:41.049 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 10:40:41.049 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 10:40:41.049 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 10:40:41.169 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 43] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 10:40:41.169 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 45] - +++ Started the streaming client 
+[34m13-11-2024 10:40:41.169 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 50] - +++ Admin API connected 
+[34m13-11-2024 10:55:45.618 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 20] - Running Admin Sample... 
+[34m13-11-2024 10:55:45.621 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 10:55:45.641 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [NO4qJZMBXOQfOZIcPbzo] 
+[34m13-11-2024 10:55:46.457 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:55:46.458 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 10:55:46.458 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:55:46.458 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:55:46.458 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:55:46.458 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:55:46.458 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 10:55:46.458 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:55:46.458 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:55:46.459 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 10:55:46.459 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:55:46.459 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 10:55:46.459 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:55:46.459 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 10:55:46.459 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 10:55:46.460 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 30] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 10:55:47.749 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @56247ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 10:55:47.803 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 10:55:48.200 [WebSocketClient@1241976048-89] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 10:55:48.201 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 10:55:48.203 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 10:55:48.204 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 10:55:48.206 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 10:55:48.206 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 10:55:48.206 [WebSocketClient@1241976048-89] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 10:55:48.301 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 44] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 10:55:48.302 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 46] - +++ Started the streaming client 
+[34m13-11-2024 10:55:48.302 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 51] - +++ Admin API connected 
+[34m13-11-2024 10:55:54.660 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 79] - +++ Members found: 5 
+[34m13-11-2024 10:55:54.661 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 81] - +++ Member: Bo2bo2lol 
+[34m13-11-2024 10:55:54.661 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 81] - +++ Member: Bbobar23 
+[34m13-11-2024 10:55:54.661 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 81] - +++ Member: 261-EUR-Bbobycopper 
+[34m13-11-2024 10:55:54.662 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 81] - +++ Member: 261-EUR-Bbobycopper 
+[34m13-11-2024 10:55:54.662 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 81] - +++ Member: Bobkockalone 
+[34m13-11-2024 11:10:01.736 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 22] - Running Admin Sample... 
+[34m13-11-2024 11:10:01.741 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 11:10:01.767 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [VbE3JZMBcMSHI8BXTvEm] 
+[34m13-11-2024 11:10:02.693 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:02.693 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 11:10:02.693 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:02.693 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:02.693 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:02.694 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:02.694 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 11:10:02.694 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:02.694 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:02.694 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 11:10:02.694 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:02.694 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 11:10:02.694 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:02.694 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 11:10:02.694 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:02.695 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 32] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 11:10:04.018 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @12739ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 11:10:04.071 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 11:10:04.490 [WebSocketClient@1241976048-87] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 11:10:04.492 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 11:10:04.494 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 11:10:04.495 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 11:10:04.499 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 11:10:04.499 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 11:10:04.499 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 11:10:04.570 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 46] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 11:10:04.570 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 48] - +++ Started the streaming client 
+[34m13-11-2024 11:10:04.570 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 53] - +++ Admin API connected 
+[34m13-11-2024 11:10:07.545 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 82] - +++ Members found: 3 
+[34m13-11-2024 11:10:07.546 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bo2bo2lol 
+[34m13-11-2024 11:10:07.546 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bbobar23 
+[34m13-11-2024 11:10:07.546 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: 261-EUR-Bbobycopper 
+[1;31m13-11-2024 11:10:07.601 [ForkJoinPool-1-worker-1] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 122] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[1;31m13-11-2024 11:10:07.602 [ForkJoinPool-1-worker-1] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 122] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[1;31m13-11-2024 11:10:07.603 [ForkJoinPool-1-worker-1] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 122] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[34m13-11-2024 11:10:48.635 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 22] - Running Admin Sample... 
+[34m13-11-2024 11:10:48.638 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 11:10:48.658 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [Ilw4JZMBsQxADQayBb9S] 
+[34m13-11-2024 11:10:49.462 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:49.462 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 11:10:49.462 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:49.462 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:49.462 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:49.463 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:49.463 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 11:10:49.463 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:49.463 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:49.463 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 11:10:49.463 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:49.463 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 11:10:49.463 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:49.463 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 11:10:49.463 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:10:49.464 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 32] - Launched compute engine app for project [fist-space.ziqni.app] and user [user-not-set] 
+[1;31m13-11-2024 11:10:50.767 [main] AdminApiClientConfiguration ERROR[0;39m [36mc.z.a.s.c.AdminApiClientConfiguration[0;39m [AdminApiClientConfiguration.java: 160] - API Key error 
+java.lang.Exception: Invalid api key - resource do not match first-space.ziqni.app
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:159)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:43)
+	at com.ziqni.Main.runAdminSample(Main.java:85)
+	at com.ziqni.Main.main(Main.java:33)
+[1;31m13-11-2024 11:10:50.768 [main] GlobalExceptionHandler ERROR[0;39m [36mc.z.u.GlobalExceptionHandler[0;39m [GlobalExceptionHandler.java: 11] - Unhandled exception caught! 
+java.lang.Exception: Invalid api key - resource do not match first-space.ziqni.app
+	at com.ziqni.admin.sdk.configuration.AdminApiClientConfiguration.verifyXApiKeyToken(AdminApiClientConfiguration.java:159)
+	at com.ziqni.admin.sdk.streaming.WsClient.updateOauthToken(WsClient.java:122)
+	at com.ziqni.admin.sdk.streaming.WsClient.makeAuthHeader(WsClient.java:116)
+	at com.ziqni.admin.sdk.streaming.WsClient.<init>(WsClient.java:77)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:202)
+	at com.ziqni.admin.sdk.streaming.StreamingClient.start(StreamingClient.java:191)
+	at com.ziqni.admin.ZiqniAdminSample.<init>(ZiqniAdminSample.java:43)
+	at com.ziqni.Main.runAdminSample(Main.java:85)
+	at com.ziqni.Main.main(Main.java:33)
+[34m13-11-2024 11:11:13.342 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 22] - Running Admin Sample... 
+[34m13-11-2024 11:11:13.345 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 11:11:13.365 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [YkA4JZMB70GTsZ5rZafU] 
+[34m13-11-2024 11:11:14.182 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:11:14.182 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 11:11:14.183 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:11:14.183 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:11:14.183 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:11:14.183 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:11:14.183 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 11:11:14.183 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:11:14.183 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:11:14.183 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 11:11:14.183 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:11:14.184 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 11:11:14.184 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:11:14.184 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 11:11:14.184 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:11:14.185 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 32] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 11:11:15.502 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @11181ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 11:11:15.564 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 11:11:16.008 [WebSocketClient@1241976048-87] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 11:11:16.010 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 11:11:16.012 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 11:11:16.014 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 11:11:16.018 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 11:11:16.018 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 11:11:16.018 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 11:11:16.063 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 46] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 11:11:16.063 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 48] - +++ Started the streaming client 
+[34m13-11-2024 11:11:16.063 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 53] - +++ Admin API connected 
+[34m13-11-2024 11:11:29.520 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 82] - +++ Members found: 3 
+[34m13-11-2024 11:11:29.521 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bo2bo2lol 
+[34m13-11-2024 11:11:29.521 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bbobar23 
+[34m13-11-2024 11:11:29.521 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: 261-EUR-Bbobycopper 
+[1;31m13-11-2024 11:11:56.254 [ForkJoinPool-1-worker-1] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 122] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[1;31m13-11-2024 11:11:56.255 [ForkJoinPool-1-worker-2] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 122] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[1;31m13-11-2024 11:12:10.459 [ForkJoinPool-1-worker-3] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 122] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[34m13-11-2024 11:12:55.539 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 22] - Running Admin Sample... 
+[34m13-11-2024 11:12:55.542 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 11:12:55.570 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [aTI5JZMB86VhhruA9ewR] 
+[34m13-11-2024 11:12:56.428 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:12:56.429 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 11:12:56.429 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:12:56.429 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:12:56.429 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:12:56.429 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:12:56.429 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 11:12:56.429 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:12:56.429 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:12:56.430 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 11:12:56.430 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:12:56.430 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 11:12:56.430 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:12:56.430 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 11:12:56.430 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:12:56.431 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 32] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 11:12:57.756 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @10784ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 11:12:57.810 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 11:12:58.157 [WebSocketClient@1241976048-87] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 11:12:58.159 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 11:12:58.161 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 11:12:58.162 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 11:12:58.166 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 11:12:58.166 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 11:12:58.166 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 11:12:58.308 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 46] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 11:12:58.309 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 48] - +++ Started the streaming client 
+[34m13-11-2024 11:12:58.309 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 53] - +++ Admin API connected 
+[34m13-11-2024 11:12:58.426 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 82] - +++ Members found: 3 
+[34m13-11-2024 11:12:58.427 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bo2bo2lol 
+[34m13-11-2024 11:12:58.427 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bbobar23 
+[34m13-11-2024 11:12:58.427 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: 261-EUR-Bbobycopper 
+[1;31m13-11-2024 11:13:05.739 [ForkJoinPool-1-worker-1] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 122] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[1;31m13-11-2024 11:13:05.740 [ForkJoinPool-1-worker-2] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 122] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[1;31m13-11-2024 11:13:19.484 [ForkJoinPool-1-worker-1] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 122] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[34m13-11-2024 11:14:33.453 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 22] - Running Admin Sample... 
+[34m13-11-2024 11:14:33.457 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 11:14:33.476 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [Hvs7JZMBbGEyKR-VczOE] 
+[34m13-11-2024 11:14:34.318 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:14:34.318 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 11:14:34.318 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:14:34.318 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:14:34.318 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:14:34.319 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:14:34.319 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 11:14:34.319 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:14:34.319 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:14:34.319 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 11:14:34.319 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:14:34.319 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 11:14:34.319 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:14:34.319 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 11:14:34.319 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:14:34.320 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 32] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 11:14:35.636 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @11009ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 11:14:35.687 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 11:14:36.057 [WebSocketClient@1241976048-87] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 11:14:36.059 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 11:14:36.060 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 11:14:36.061 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 11:14:36.064 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 11:14:36.064 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 11:14:36.064 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 11:14:36.186 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 46] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 11:14:36.186 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 48] - +++ Started the streaming client 
+[34m13-11-2024 11:14:36.186 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 53] - +++ Admin API connected 
+[34m13-11-2024 11:14:36.330 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 82] - +++ Members found: 3 
+[34m13-11-2024 11:14:36.330 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bo2bo2lol 
+[34m13-11-2024 11:14:36.331 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bbobar23 
+[34m13-11-2024 11:14:36.331 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: 261-EUR-Bbobycopper 
+[1;31m13-11-2024 11:14:44.324 [ForkJoinPool-1-worker-1] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 123] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3226
+        message: error.unit_of_measure_with_given_key_does_not_exist
+        errorAt: null
+    }, class ErrorDetail {
+        modelId: null
+        errorCode: 3018
+        message: error.points_is_not_set
+        errorAt: null
+    }, class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[1;31m13-11-2024 11:14:44.324 [ForkJoinPool-1-worker-2] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 123] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3226
+        message: error.unit_of_measure_with_given_key_does_not_exist
+        errorAt: null
+    }, class ErrorDetail {
+        modelId: null
+        errorCode: 3018
+        message: error.points_is_not_set
+        errorAt: null
+    }, class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[1;31m13-11-2024 11:15:09.003 [ForkJoinPool-1-worker-3] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 123] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3226
+        message: error.unit_of_measure_with_given_key_does_not_exist
+        errorAt: null
+    }, class ErrorDetail {
+        modelId: null
+        errorCode: 3018
+        message: error.points_is_not_set
+        errorAt: null
+    }, class ErrorDetail {
+        modelId: null
+        errorCode: 3214
+        message: error.at_least_member_id_or_member_ref_id_should_exist
+        errorAt: null
+    }]
+}] 
+[34m13-11-2024 11:15:37.697 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 22] - Running Admin Sample... 
+[34m13-11-2024 11:15:37.700 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 11:15:37.720 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [ycQ8JZMB7PZArQRpbqJ4] 
+[34m13-11-2024 11:15:38.563 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:15:38.563 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 11:15:38.563 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:15:38.563 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:15:38.563 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:15:38.563 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:15:38.564 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 11:15:38.564 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:15:38.564 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:15:38.564 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 11:15:38.564 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:15:38.564 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 11:15:38.564 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:15:38.564 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 11:15:38.564 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:15:38.565 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 32] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 11:15:39.929 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @14895ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 11:15:39.982 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 11:15:40.353 [WebSocketClient@1241976048-87] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 11:15:40.355 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 11:15:40.357 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 11:15:40.359 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 11:15:40.363 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 11:15:40.363 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 11:15:40.363 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 11:15:40.481 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 46] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 11:15:40.481 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 48] - +++ Started the streaming client 
+[34m13-11-2024 11:15:40.481 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 53] - +++ Admin API connected 
+[34m13-11-2024 11:15:40.611 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 82] - +++ Members found: 3 
+[34m13-11-2024 11:15:40.611 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bo2bo2lol 
+[34m13-11-2024 11:15:40.611 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bbobar23 
+[34m13-11-2024 11:15:40.611 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: 261-EUR-Bbobycopper 
+[1;31m13-11-2024 11:15:40.660 [ForkJoinPool-1-worker-1] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 123] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3226
+        message: error.unit_of_measure_with_given_key_does_not_exist
+        errorAt: null
+    }, class ErrorDetail {
+        modelId: null
+        errorCode: 3018
+        message: error.points_is_not_set
+        errorAt: null
+    }]
+}] 
+[1;31m13-11-2024 11:15:40.661 [ForkJoinPool-1-worker-2] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 123] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3226
+        message: error.unit_of_measure_with_given_key_does_not_exist
+        errorAt: null
+    }, class ErrorDetail {
+        modelId: null
+        errorCode: 3018
+        message: error.points_is_not_set
+        errorAt: null
+    }]
+}] 
+[1;31m13-11-2024 11:15:51.723 [ForkJoinPool-1-worker-1] ZiqniAdminSample ERROR[0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 123] - +++ Error registering event: [class Error {
+    modelId: null
+    errorCode: 400
+    message: error.bad_request
+    errorAt: null
+    detail: [class ErrorDetail {
+        modelId: null
+        errorCode: 3226
+        message: error.unit_of_measure_with_given_key_does_not_exist
+        errorAt: null
+    }, class ErrorDetail {
+        modelId: null
+        errorCode: 3018
+        message: error.points_is_not_set
+        errorAt: null
+    }]
+}] 
+[34m13-11-2024 11:16:45.698 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 22] - Running Admin Sample... 
+[34m13-11-2024 11:16:45.702 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 38] - Ziqni environment set to [/local_dev/client/] 
+[34m13-11-2024 11:16:45.722 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 187] - Instance id set to [SGY9JZMBLY749GoheN8a] 
+[34m13-11-2024 11:16:46.535 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_BASE_PATH] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:16:46.536 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.base.path 
+[34m13-11-2024 11:16:46.536 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_HOST] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:16:46.536 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_PORT] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:16:46.536 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_SERVER_SCHEME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:16:46.536 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_SERVER_URL] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:16:46.536 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.server.url 
+[34m13-11-2024 11:16:46.536 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_REALM] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:16:46.536 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_USERNAME] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:16:46.537 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.username 
+[34m13-11-2024 11:16:46.537 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_PASSWORD] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:16:46.537 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.password 
+[34m13-11-2024 11:16:46.537 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_RESOURCE] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:16:46.537 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 146] - Parameter NOT FOUND for admin.client.auth.resource 
+[34m13-11-2024 11:16:46.537 [main] ConfigurationLoader INFO [0;39m [36mc.z.a.s.u.ConfigurationLoader[0;39m [ConfigurationLoader.java: 157] - Parameter [ZIQNI_ADMIN_CLIENT_AUTH_API_KEY] value retrieved from LOADED-PROPS variables [TRUE] 
+[34m13-11-2024 11:16:46.538 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 32] - Launched compute engine app for project [first-space.ziqni.app] and user [user-not-set] 
+[34m13-11-2024 11:16:47.828 [main] Log INFO [0;39m [36mo.e.j.util.log[0;39m [Log.java: 170] - Logging initialized @10896ms to org.eclipse.jetty.util.log.Slf4jLog 
+[34m13-11-2024 11:16:47.883 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 11:16:48.259 [WebSocketClient@1241976048-87] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 11:16:48.260 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 11:16:48.261 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 11:16:48.261 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 11:16:48.265 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 11:16:48.265 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 11:16:48.265 [WebSocketClient@1241976048-87] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 11:16:48.381 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 46] - +++ Waiting for the streaming client to start [1] 
+[34m13-11-2024 11:16:48.382 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 48] - +++ Started the streaming client 
+[34m13-11-2024 11:16:48.382 [main] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 53] - +++ Admin API connected 
+[34m13-11-2024 11:16:48.524 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 82] - +++ Members found: 3 
+[34m13-11-2024 11:16:48.525 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bo2bo2lol 
+[34m13-11-2024 11:16:48.525 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: Bbobar23 
+[34m13-11-2024 11:16:48.525 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 84] - +++ Member: 261-EUR-Bbobycopper 
+[34m13-11-2024 11:16:56.516 [ForkJoinPool-1-worker-1] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 128] - +++ Event registered: ig89JZMBP8sGNndJgxEe 
+[34m13-11-2024 11:16:57.435 [ForkJoinPool-1-worker-3] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 128] - +++ Event registered: iw89JZMBP8sGNndJgxEg 
+[34m13-11-2024 11:16:57.435 [ForkJoinPool-1-worker-2] ZiqniAdminSample INFO [0;39m [36mc.z.a.ZiqniAdminSample[0;39m [ZiqniAdminSample.java: 128] - +++ Event registered: jA89JZMBP8sGNndJgxEg 
+[34m13-11-2024 11:43:43.290 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 11:43:43.555 [WebSocketClient@1645930826-140] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 11:43:43.556 [WebSocketClient@1645930826-140] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 11:43:43.556 [WebSocketClient@1645930826-140] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 11:43:43.557 [WebSocketClient@1645930826-140] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 11:43:43.557 [WebSocketClient@1645930826-140] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 11:43:43.557 [WebSocketClient@1645930826-140] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 11:43:43.557 [WebSocketClient@1645930826-140] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 12:31:38.580 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 12:31:39.017 [WebSocketClient@378572676-214] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 12:31:39.017 [WebSocketClient@378572676-214] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 12:31:39.018 [WebSocketClient@378572676-214] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 12:31:39.018 [WebSocketClient@378572676-214] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 12:31:39.018 [WebSocketClient@378572676-214] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 12:31:39.018 [WebSocketClient@378572676-214] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 12:31:39.018 [WebSocketClient@378572676-214] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 12:34:02.315 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 12:34:02.965 [WebSocketClient@1414708768-235] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 12:34:02.966 [WebSocketClient@1414708768-235] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 12:34:02.966 [WebSocketClient@1414708768-235] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 12:34:02.967 [WebSocketClient@1414708768-235] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 12:34:02.967 [WebSocketClient@1414708768-235] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 12:34:02.967 [WebSocketClient@1414708768-235] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 12:34:02.967 [WebSocketClient@1414708768-235] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 12:40:57.975 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 12:40:58.565 [WebSocketClient@1108422398-264] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 12:40:58.566 [WebSocketClient@1108422398-264] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 12:40:58.567 [WebSocketClient@1108422398-264] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 12:40:58.567 [WebSocketClient@1108422398-264] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 12:40:58.568 [WebSocketClient@1108422398-264] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 12:40:58.568 [WebSocketClient@1108422398-264] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 12:40:58.568 [WebSocketClient@1108422398-264] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 12:43:31.473 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 12:43:31.711 [WebSocketClient@98293307-289] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 12:43:31.712 [WebSocketClient@98293307-289] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 12:43:31.713 [WebSocketClient@98293307-289] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 12:43:31.713 [WebSocketClient@98293307-289] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 12:43:31.714 [WebSocketClient@98293307-289] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 12:43:31.714 [WebSocketClient@98293307-289] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 12:43:31.714 [WebSocketClient@98293307-289] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 12:45:11.720 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 12:45:14.186 [WebSocketClient@1063512327-315] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 12:45:14.186 [WebSocketClient@1063512327-315] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 12:45:14.186 [WebSocketClient@1063512327-315] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 12:45:14.187 [WebSocketClient@1063512327-315] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 12:45:14.187 [WebSocketClient@1063512327-315] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 12:45:14.187 [WebSocketClient@1063512327-315] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 12:45:14.187 [WebSocketClient@1063512327-315] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 
+[34m13-11-2024 13:08:39.203 [pool-4-thread-1] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 222] - Connecting 
+[34m13-11-2024 13:08:39.457 [WebSocketClient@217583676-362] WsClient INFO [0;39m [36mc.z.a.s.s.WsClient[0;39m [WsClient.java: 294] - Connection established successfully with the server. 
+[34m13-11-2024 13:08:39.458 [WebSocketClient@217583676-362] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/rpc-results 
+[34m13-11-2024 13:08:39.458 [WebSocketClient@217583676-362] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 37] - Subscribing to /user/queue/callbacks 
+[34m13-11-2024 13:08:39.459 [WebSocketClient@217583676-362] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 71] - CONNECTED 
+[34m13-11-2024 13:08:39.459 [WebSocketClient@217583676-362] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - version: [1.2] 
+[34m13-11-2024 13:08:39.459 [WebSocketClient@217583676-362] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - heart-beat: [10000,10000] 
+[34m13-11-2024 13:08:39.459 [WebSocketClient@217583676-362] WsStompSessionHandler INFO [0;39m [36mc.z.a.s.s.WsStompSessionHandler[0;39m [WsStompSessionHandler.java: 73] - user-name: [d12d2cb5-dc86-4310-9577-8cab467fd6f2] 

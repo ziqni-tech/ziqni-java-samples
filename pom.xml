@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ziqni</groupId>
+    <artifactId>ziqni-java-samples</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <ziqni-admin-sdk.version>1.0.22</ziqni-admin-sdk.version>
+        <ziqni-member-sdk-version>1.0.15</ziqni-member-sdk-version>
+    </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.ziqni/ziqni-admin-sdk -->
+        <dependency>
+            <groupId>com.ziqni</groupId>
+            <artifactId>ziqni-admin-sdk</artifactId>
+            <version>${ziqni-admin-sdk.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.ziqni/ziqni-member-sdk -->
+        <dependency>
+            <groupId>com.ziqni</groupId>
+            <artifactId>ziqni-member-sdk</artifactId>
+            <version>${ziqni-member-sdk-version}</version>
+        </dependency>
+
+
+    </dependencies>
+</project>
